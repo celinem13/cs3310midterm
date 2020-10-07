@@ -5,69 +5,47 @@ public class BubbleSort {
         int randomNum;
         int[] arrayTest4 = new int[1000000];
 
-        System.out.println("Array 4: 1,000,000 elements\nArray 4 Unsorted: ");
         for (int i = 0; i < arrayTest4.length; i++){
             randomNum = random.nextInt(1000000);
             arrayTest4[i] = randomNum;
-            System.out.print(arrayTest4[i] + "\t");
         }
-        System.out.println();
 
+        long startTime = System.currentTimeMillis();
         bubbleSort(arrayTest4);
-        System.out.println("Array 4 sorted:");
-        for (int j : arrayTest4) {
-            System.out.println(j + "\t");
-        }
-        System.out.println();
+        long stopTime = System.currentTimeMillis();
+
+        System.out.println("Time for array 4 to be sorted (1,000,000 elements): " + (stopTime-startTime) + " ms");
 
         int[] arrayTest3 = new int[100000];
-
-        System.out.println("Array 3: 100,000 elements\nArray 3 Unsorted: ");
         for (int i = 0; i < arrayTest3.length; i++){
             randomNum = random.nextInt(100000);
             arrayTest3[i] = randomNum;
-            System.out.print(arrayTest3[i] + "\t");
         }
-        System.out.println();
-
+        startTime = System.currentTimeMillis();
         bubbleSort(arrayTest3);
-        System.out.println("Array 3 sorted:");
-        for (int j : arrayTest3) {
-            System.out.println(j + "\t");
-        }
-        System.out.println();
+        stopTime = System.currentTimeMillis();
+        System.out.println("Time for array 3 to be sorted (100,000 elements): " + (stopTime-startTime) + " ms");
 
         int[] arrayTest2 = new int[1000];
 
-        System.out.println("Array 2: 100,000 elements\nArray 3 Unsorted: ");
         for (int i = 0; i < arrayTest2.length; i++){
             randomNum = random.nextInt(1000);
             arrayTest2[i] = randomNum;
-            System.out.print(arrayTest2[i] + "\t");
         }
-        System.out.println();
-
+        startTime = System.currentTimeMillis();
         bubbleSort(arrayTest2);
-        System.out.println("Array 2 sorted:");
-        for (int j : arrayTest2) {
-            System.out.println(j + "\t");
-        }
+        stopTime = System.currentTimeMillis();
+        System.out.println("Time for array 2 to be sorted (1,000 elements): " + (stopTime-startTime) + " ms");
 
         int[] arrayTest = new int[100];
-
-        System.out.println("Array 1: 100 elements\nArray 3 Unsorted: ");
         for (int i = 0; i < arrayTest.length; i++){
             randomNum = random.nextInt(100);
             arrayTest[i] = randomNum;
-            System.out.print(arrayTest[i] + "\t");
         }
-        System.out.println();
-
+        startTime = System.currentTimeMillis();
         bubbleSort(arrayTest);
-        System.out.println("Array 1 sorted:");
-        for (int j : arrayTest) {
-            System.out.println(j + "\t");
-        }
+        stopTime = System.currentTimeMillis();
+        System.out.println("Time for array 1 to be sorted: (100 elements)" + (stopTime-startTime) + " ms");
     }
 
     public static void bubbleSort(int[] array){
